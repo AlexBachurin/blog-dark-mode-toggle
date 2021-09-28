@@ -1,36 +1,18 @@
+import { useState } from "react";
+import Article from "./components/Article";
 import Navbar from "./components/Navbar";
-
+import articles from "./data";
 
 function App() {
+  const [posts, setPosts] = useState(articles);
   return (
     <>
       <Navbar />
       <main>
         <section className="articles">
-          <article className="post">
-            <h2>Title</h2>
-            <div className="post-info">
-              <span>date</span>
-              <span>5 min read</span>
-            </div>
-            <p>Descr</p>
-          </article>
-          <article className="post">
-            <h2>Title</h2>
-            <div className="post-info">
-              <span>date</span>
-              <span>5 min read</span>
-            </div>
-            <p>Descr</p>
-          </article>
-          <article className="post">
-            <h2>Title</h2>
-            <div className="post-info">
-              <span>date</span>
-              <span>5 min read</span>
-            </div>
-            <p>Descr</p>
-          </article>
+          {posts.map(post => {
+            return <Article key={post.id} {...post} />
+          })}
         </section>
       </main>
     </>

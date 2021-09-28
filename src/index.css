@@ -1,3 +1,9 @@
+:root {
+  --clr-primary: #49a6e9;
+  --clr-main-bcg: #fff;
+  --clr-main-text: #282c35;
+}
+
 .light-theme {
   --clr-primary: #49a6e9;
   --clr-main-bcg: #fff;
@@ -7,6 +13,11 @@
 .dark-theme {
   --clr-main-bcg: #282c35;
   --clr-main-text: #fff;
+}
+
+body {
+  color: var(--clr-main-text);
+  background: var(var(--clr-main-bcg));
 }
 
 .nav-center {
@@ -23,7 +34,6 @@
   width: 60px;
   height: 30px;
   border-radius: 10px;
-  padding-top: 6px;
   font-size: 16px;
   color: #49a6e9;
   display: grid;
@@ -35,7 +45,12 @@
   cursor: pointer;
   display: flex;
   justify-content: space-between;
+  width: 50px;
+  height: 24px;
+  padding: 0 5px;
+  border-radius: 30px;
   background-color: #0f1114;
+  transition: all 0.2s ease;
 }
 .theme-toggle span {
   display: grid;
@@ -64,4 +79,16 @@
 }
 .post {
   margin-bottom: 3rem;
+  border-bottom: 2px dotted var(--clr-main-text);
+}
+
+.post h2 {
+  color: var(--clr-primary);
+  margin-bottom: 0.7rem;
+}
+.post-info {
+  font-style: italic;
+}
+.post-info span {
+  margin-right: 0.5rem;
 }
