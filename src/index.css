@@ -1,13 +1,67 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+.light-theme {
+  --clr-primary: #49a6e9;
+  --clr-main-bcg: #fff;
+  --clr-main-text: #282c35;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.dark-theme {
+  --clr-main-bcg: #282c35;
+  --clr-main-text: #fff;
+}
+
+.nav-center {
+  width: 90vw;
+  max-width: 600px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.theme-toggle {
+  position: relative;
+  width: 60px;
+  height: 30px;
+  border-radius: 10px;
+  padding-top: 6px;
+  font-size: 16px;
+  color: #49a6e9;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 5px;
+  text-transform: capitalize;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  background-color: #0f1114;
+}
+.theme-toggle span {
+  display: grid;
+  place-items: center;
+}
+.theme-icon {
+  color: #ffff00;
+}
+.theme-switch {
+  position: absolute;
+  border-radius: 10px;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  background-color: #49a6e9;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+.articles {
+  padding: 5rem 0;
+  width: 90vw;
+  max-width: 600px;
+  margin: 0 auto;
+}
+.post {
+  margin-bottom: 3rem;
 }
