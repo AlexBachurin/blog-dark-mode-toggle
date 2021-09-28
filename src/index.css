@@ -63,6 +63,9 @@ body {
 .theme-switch {
   position: absolute;
   border-radius: 10px;
+  border: none;
+  border-radius: none;
+  outline: none;
   top: 0;
   right: 0;
   width: 50%;

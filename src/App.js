@@ -4,6 +4,7 @@ import Navbar from "./components/Navbar";
 import articles from "./data";
 
 function App() {
+  // eslint-disable-next-line
   const [posts, setPosts] = useState(articles);
   return (
     <>
