@@ -23,13 +23,12 @@ const Navbar = () => {
     const toggleMode = () => {
 
         checkClassName();
-        //get html element and set theme to html
-        document.documentElement.className = `${theme}`
+
     }
 
     useEffect(() => {
+        //get html element and set theme to html
         document.documentElement.className = `${theme}`
-
     }, [theme])
     return (
         <nav>
