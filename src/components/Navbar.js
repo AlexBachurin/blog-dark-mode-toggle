@@ -54,10 +54,16 @@ const Navbar = () => {
         //set theme to local storage when user switch theme
         localStorage.setItem('theme', theme)
     }, [theme])
+
+    //src for image based on theme
+    const imgSrc = (theme === 'light-theme') ? 'https://res.cloudinary.com/dljezd6qv/image/upload/v1619820552/main-logo.png' : 'https://res.cloudinary.com/dljezd6qv/image/upload/v1619821176/main-logo-white-small.png';
+
+
+
     return (
         <nav>
             <div className="nav-center">
-                <img src="https://res.cloudinary.com/dljezd6qv/image/upload/v1619820552/main-logo.png" alt="bacha-coding" />
+                <img src={imgSrc} alt="bacha-coding" />
                 <h1 className="nav-title">My Blog</h1>
                 <div onClick={toggleMode} className="theme-toggle">
                     <span><FaSun className="theme-icon" /></span>
