@@ -1,23 +1,24 @@
 :root {
-  --clr-primary: #49a6e9;
+  --clr-primary: #2c648c;
   --clr-main-bcg: #fff;
   --clr-main-text: #282c35;
 }
 
 .light-theme {
-  --clr-primary: #49a6e9;
+  --clr-primary: #2c648c;
   --clr-main-bcg: #fff;
   --clr-main-text: #282c35;
 }
 
 .dark-theme {
+  --clr-primary: #6db8ed;
   --clr-main-bcg: #282c35;
   --clr-main-text: #fff;
 }
 
 body {
   color: var(--clr-main-text);
-  background: var(var(--clr-main-bcg));
+  background: var(--clr-main-bcg);
 }
 
 .nav-center {
@@ -63,7 +64,7 @@ body {
   position: absolute;
   border-radius: 10px;
   top: 0;
-  left: 0;
+  right: 0;
   width: 50%;
   height: 100%;
   background-color: #49a6e9;
@@ -71,7 +72,7 @@ body {
   transition: all 0.5s ease-in-out;
 }
 .switch-toggle {
-  left: 50%;
+  right: 50%;
 }
 
 .articles {
